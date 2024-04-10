@@ -1,39 +1,61 @@
-# SpaceX Launch Prediction 
-This is a capstone project from the [IBM Data Science Professional Certificate](https://www.coursera.org/professional-certificates/ibm-data-science).
+# SpaceX Launch Prediction
 
-The objective of this project is to predict if the first stage of the SpaceX Falcon 9 rocket will land successfully.  SpaceX advertises Falcon 9 rocket launches on its website, with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. 
+## Overview
+This project is part of the [Applied Data Science Capstone](https://www.coursera.org/learn/applied-data-science-capstone?specialization=ibm-data-science) by IBM on Coursera. It focuses on using data science techniques to predict the outcomes of SpaceX Falcon 9 rocket launches through data collection, data wrangling, exploratory data analysis (EDA), interactive visual analytics, and predictive analysis.
 
-Therefore if likelihood of the first stage rocket landing successfully can be predicted accurately, the cost of a launch can be predicted
+<p align="center">
+    <img src="README%20assests/intro_image.png" alt="Intro Image" style="width: 80%"/>
+</p>
 
-## Agenda 
-The process of Data Science methodology in this project includes data collection, data wrangling, exploratory data analysis, data visualization, model development,and model evaluation.
 
-**Data Collection and Wrangling**
-- [Collect data via API](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/jupyter-labs-spacex-data-collection-api.ipynb)
-- [Collect data via web scrapping](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/jupyter-labs-webscraping.ipynb)
-- [Wrangle data with *pandas*](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/labs-jupyter-spacex-Data%20wrangling.ipynb)
+## Live Dashboard
+Experience the interactive SpaceX Launch Prediction dashboard hosted live at [PythonAnywhere](http://timkong.pythonanywhere.com/). Explore the data-driven insights and visualizations in real-time.
 
-**Exploratory Data Analysis (EDA)**
-- [EDA with *pandas*](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/jupyter-labs-eda-pandas.ipynb)
-- [EDA via SQL](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/jupyter-labs-eda-sql-coursera.ipynb)
-- [EDA via visualization](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/jupyter-labs-eda-dataviz.ipynb)
+<p align="center">
+    <img src="README%20assests/Dash_app.png" alt="Dash app" style="width: 80%"/>
+</p>
 
-**Interactive Visual Analysis**
-- [Interactive geospatial visualization](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/lab_jupyter_launch_site_location.ipynb)
-- [Interactive dashboard visualization](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/spacex_dash_app.py)
-- [Host dash app on online environment](http://timkong.pythonanywhere.com/)
+## Project Structure
+- `data/`: Contains datasets used in the project.
+- `Data Collection and Data Wrangling/`: Notebooks for data collection, web scraping, and data preparation.
+- `Exploratory Data Analysis/`: Notebooks for performing EDA using Pandas, visualization libraries, and SQL.
+- `Interactive Visual Analytics and Dashboard/`: Scripts and notebooks for creating interactive visualizations and dashboards with Plotly, Dash, and Folium.
+- `Predictive Analysis/`: Notebook for developing and evaluating machine learning models to predict launch success.
 
-**Predictive Analysis (Classification)**
-- [Best classifier with confusion matrix](https://github.com/TimKong21/IBM-Data-Science-Professional-Certificate-Projects/blob/main/Applied%20capstone/SpaceX_Machine%20Learning%20Prediction_Part_5.ipynb)
-## References
-Below are the references of the core modules and services used in this project
- - [SpaceX API](https://github.com/r-spacex/SpaceX-API)
- - [BS4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
- - [Pandas](https://pandas.pydata.org/docs/reference/index.html)
- - [Matplotlib](https://matplotlib.org/)
- - [Seaborn](https://seaborn.pydata.org/)
- - [Plotly](https://dash.plotly.com/layout)
- - [Folium](https://python-visualization.github.io/folium/plugins.html)
- - [PythonAnywhere](https://www.pythonanywhere.com/)
- - [Scikit-learn](https://scikit-learn.org/stable/)
-  
+## Datasets
+- `spacex_launch_dash.csv`: Launch data for dashboard visualizations.
+- `spacex_launch_geo.csv`: Geographical data for mapping launch sites.
+
+## Quick Start
+1. Clone this repository and navigate to the project's root directory:
+   ```bash
+   git clone https://github.com/TimKong21/SpaceX-Launch-Prediction.git
+   cd SpaceX-Launch-Prediction
+   ```
+2. Set Up a Virtual Environment in the project directory:
+   ```bash
+   # For Windows
+   python -m venv venv
+   .\venv\Scripts\activate
+
+   # For MacOS/Linux
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install Jupyter Notebook or JupyterLab to run `.ipynb` notebooks. If you don't have them installed, you can install JupyterLab with:
+   ```bash
+   pip install jupyterlab
+   ```
+4. Install required Python packages by running:
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Open the notebook(s) of interest with Jupyter by running:
+   ```bash
+   jupyter lab
+   ```
+6. To run the dashboard, navigate to the dashboard directory and then start the Dash app:
+   ```bash
+   cd ".\Interactive Visual Analytics and Dashboard\"
+   python .\launch_record_analysis_dash_app.py
+   ```
